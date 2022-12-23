@@ -3,10 +3,10 @@ import RPi.GPIO as GPIO
 import time
 
 #Definition of  motor pin 
-IN1 = 20
-IN2 = 21
-IN3 = 19
-IN4 = 26
+IN1 = 22
+IN2 = 23
+IN3 = 24
+IN4 = 25
 ENA = 16
 ENB = 13
 
@@ -112,14 +112,14 @@ time.sleep(2)
 #turn right  in place 3s，stop 1s。
 try:
     motor_init()
-    while True:
-        run(1)
-	back(1)
-	left(2)
-	right(2)
-	spin_left(3)
-	spin_right(3)
-	brake(1)
+    # while True:
+    #     run(1)
+    back(1)
+    left(2)
+    right(2)
+    spin_left(3)
+    spin_right(3)
+    brake(1)
 except KeyboardInterrupt:
     pass
 pwm_ENA.stop()
